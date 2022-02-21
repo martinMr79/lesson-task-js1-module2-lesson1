@@ -1,6 +1,6 @@
 //Question 1
 
-
+/*
 
 function receivingFunction(isAFunction) {
      if(typeof isAFunction  === "function") {
@@ -45,3 +45,52 @@ if(count === 5) {
 
 console.log(count);
 }, 1500);
+
+*/
+
+//Question 1
+
+function receivingFunction(insideFunction) {
+ 
+    if (typeof insideFunction === "function") { 
+        insideFunction()
+ }
+
+}
+
+function callbackFunction() {
+    console.log("I am a call back function")
+
+}
+
+receivingFunction(callbackFunction)
+
+
+//Question 2
+
+const colours = ["red", "green", "blue", "orange", "yellow"];
+
+colours.forEach(function(color) {
+    console.log(color)
+}); 
+
+const prizes = ["Bag of bananas", "Box of frogs", "Car of clowns"];
+
+    prizes.forEach(function(prize, index){
+        console.log(`Prize ${index +1}: ${prize}`);
+    } ) 
+ 
+//Question 3
+
+//setTimeout(someFunction, 5000); 
+
+
+setTimeout(function() {
+    console.log("I waited 5 seconds before executing")
+    alert("I waited 5 seconds before executing")
+}, 5000 )
+
+
+
+
+//Question 4
